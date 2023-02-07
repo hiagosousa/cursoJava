@@ -10,11 +10,11 @@ public class Person {
 
 	}
 
-	public double getheight() {
+	public double getHeight() {
 		return height;
 	}
 
-	public char getgender() {
+	public char getGender() {
 		return gender;
 	}
 

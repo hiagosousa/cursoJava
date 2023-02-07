@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 import entities.Person;
 
-public class Questionario {
+public class Quiz {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
@@ -22,22 +22,22 @@ public class Questionario {
 			char gender = sc.next().charAt(0);
 			person[i] = new Person(height, gender);
 		}
-		double shorter = person[0].getheight(), taller = person[0].getheight(), sum = 0.0;
+		double shorter = person[0].getHeight(), taller = person[0].getHeight(), sum = 0.0;
 		int manCounter = 0, womanCounter = 0;
 		
 		for (int i = 0; i < quantity; i++) {
 
-			if (person[i].getheight() < shorter) {
-				shorter = person[i].getheight();
+			if (person[i].getHeight() < shorter) {
+				shorter = person[i].getHeight();
 			}
-			if (person[i].getheight() > taller) {
-				taller = person[i].getheight();
+			if (person[i].getHeight() > taller) {
+				taller = person[i].getHeight();
 			}
-			if (person[i].getgender() == 'F' || person[i].getgender() == 'f') {
-				sum += person[i].getheight();
+			if (person[i].getGender() == 'F' || person[i].getGender() == 'f') {
+				sum += person[i].getHeight();
 				womanCounter++;
 			}
-			if (person[i].getgender() == 'M' || person[i].getgender() == 'm') {
+			if (person[i].getGender() == 'M' || person[i].getGender() == 'm') {
 				manCounter++;
 			}
 		}

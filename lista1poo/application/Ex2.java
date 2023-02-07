@@ -3,26 +3,26 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Trabalhador;
+import entities.Worker;
 
 public class Ex2 {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		Trabalhador trabalhador = new Trabalhador();
+		Worker worker = new Worker();
 
 		System.out.println("Digite os valores: \n");
-		trabalhador.nome = sc.nextLine();
-		trabalhador.salarioBruto = sc.nextDouble();
-		trabalhador.imposto = sc.nextDouble();
+		worker.name = sc.nextLine();
+		worker.grossSalary = sc.nextDouble();
+		worker.imposto = sc.nextDouble();
 
-		System.out.println(trabalhador);
+		System.out.println(worker);
 		System.out.println("Digite a porcentagem a se aumentar: ");
 
 		double porcentagem = sc.nextDouble();
-		trabalhador.aumentarSalario(porcentagem);
-		System.out.println(trabalhador);
+		worker.aumentarSalario(porcentagem);
+		System.out.println(worker);
 
 		sc.close();
 	}

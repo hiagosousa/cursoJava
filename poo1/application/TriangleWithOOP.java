@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 import entities.Triangle;
 
-public class Exemplo1 {
+public class TriangleWithOOP {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);

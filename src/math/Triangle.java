@@ -1,9 +1,9 @@
-package introPoo;
+package math;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class SemPoo {
+public class Triangle {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
@@ -22,15 +22,15 @@ public class SemPoo {
 		yC = sc.nextDouble();
 		
 		double p = (xA + xB + xC)/ 2.0;
-		double areaDeX = Math.sqrt(p*(p - xA) * (p - xB) * (p - xC));
+		double areaOfX = Math.sqrt(p*(p - xA) * (p - xB) * (p - xC));
 		
 		p = (yA + yB + yC)/ 2.0;
-		double areaDeY = Math.sqrt(p*(p - yA) * (p - yB) * (p - yC));
+		double areaOfY = Math.sqrt(p*(p - yA) * (p - yB) * (p - yC));
 		
-		System.out.printf("Area do triangulo X: %.4f\n",areaDeX);
-		System.out.printf("Area do triangulo Y: %.4f\n",areaDeY);
+		System.out.printf("Area do triangulo X: %.4f\n",areaOfX);
+		System.out.printf("Area do triangulo Y: %.4f\n",areaOfY);
 		
-		if(areaDeX > areaDeY) {
+		if(areaOfX > areaOfY) {
 			System.out.println("X eh a maior area");
 		} else {
 			System.out.println("Y eh a maior area");

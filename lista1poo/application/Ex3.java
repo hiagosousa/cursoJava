@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import entities.CurrencyConverter;
 
-public class Dollar {
+public class Ex3 {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
@@ -16,7 +16,7 @@ public class Dollar {
 		
 		value = sc.nextDouble();
 		
-		result = CurrencyConverter.conversao(value);
+		result = CurrencyConverter.conversion(value);
 		
 		System.out.println(result);
 		

@@ -3,42 +3,42 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Conta;
+import entities.Account;
 
-public class Banco {
+public class Bank {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		Conta conta;
-		double valor;
+		Account account;
+		double value;
 		
 		System.out.println("Digite o numero da conta");
-		int numConta = sc.nextInt();
+		int accountNumber = sc.nextInt();
 		System.out.println("Digite o dono da conta");
 		sc.nextLine();
-		String nomeTitular = sc.nextLine();
+		String name = sc.nextLine();
 		System.out.println("Havera um deposito inicial? (s/n)");
-		char haveraDeposito = sc.next().charAt(0);
-		if(haveraDeposito == 's' || haveraDeposito == 'S') {
+		char depositCondition = sc.next().charAt(0);
+		if(depositCondition == 's' || depositCondition == 'S') {
 			System.out.println("Digite o valor do deposito inicial");
-			double depositoInicial = sc.nextDouble();
-			conta = new Conta(numConta, nomeTitular, depositoInicial);
+			double firstDeposit = sc.nextDouble();
+			account = new Account(accountNumber, name, firstDeposit);
 		}else {
-			conta = new Conta(numConta, nomeTitular);
+			account = new Account(accountNumber, name);
 		}
 		System.out.println("\nDados da conta:\n");
-		System.out.println(conta);
+		System.out.println(account);
 		
 		System.out.println("\nDigite o valor do Deposito:");
-		valor = sc.nextDouble();
-		conta.fazerDeposito(valor);
-		System.out.println(conta);
+		value = sc.nextDouble();
+		account.deposit(value);
+		System.out.println(account);
 		
 		System.out.println("\nDigite o valor do Saque:");
-		valor = sc.nextDouble();
-		conta.fazerSaque(valor);
-		System.out.println(conta);
+		value = sc.nextDouble();
+		account.withdraw(value);
+		System.out.println(account);
 		
 		sc.close();
 	}
