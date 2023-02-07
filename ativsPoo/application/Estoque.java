@@ -20,10 +20,7 @@ public class Estoque {
 		System.out.println("Quantidade: ");
 		int quantity = sc.nextInt();
 		
-		Product product = new Product(name, price);
-		
-		product.setName("Computer");
-		System.out.println("Nome atualizado: " + product.getName());
+		Product product = new Product(name, price, quantity);
 
 		System.out.println(product);
 		System.out.println("Digite a quantidade de produtos a serem adicionados");
