@@ -11,5 +11,6 @@
 	<classpathentry kind="src" path="lista1poo"/>
 	<classpathentry kind="src" path="encapsulamento"/>
 	<classpathentry kind="src" path="vetores"/>
+	<classpathentry kind="src" path="listas"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
